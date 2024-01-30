@@ -1,0 +1,27 @@
+<%- include('./parcials/header.ejs') %>
+    <%- include('./parcials/navber.ejs') %>
+
+        <div class="container mt-5">
+            <h3>Top Bloggy 🤗</h3>
+            <form action="/blog/data" method="POST">
+
+                <div class="mb-2">
+                    <label for="exampleFormControlInput1" class="form-label">Your Name:</label>
+                    <input type="text" name="name" class="form-control" placeholder="Enter Your Full Name">
+                </div>
+                <div class="mb-2">
+                    <label for="exampleFormControlInput1" class="form-label">Enter Title:</label>
+                    <input type="text" name="title" class="form-control" placeholder="Enter Your Blogs Title">
+                </div>
+                <div class="mb-2">
+                    <label for="exampleFormControlTextarea1" class="form-label">Wite Your Content:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="content" rows="7"
+                        placeholder="Write To Start Here"></textarea>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Post Now</button>
+                </div>
+            </form>
+        </div>
+
+        <%- include('./parcials/footer.ejs') %>

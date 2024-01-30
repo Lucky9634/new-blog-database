@@ -1,0 +1,19 @@
+<%- include('./parcials/header.ejs') %>
+    <%- include('./parcials/navber.ejs') %>
+        <div class="container mt-5">
+            <% for(let i of alldata){%>
+            <div class="card mt-4" style="width: 80rem;">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <p class="card-text">Publishar Name : <%= i.name %></p>
+                        <p class="card-text mx-3">Publisha By : <%= i.postedAt %></p>
+                    </div>
+                    <h5 class="card-title"><%= i.title %></h5>
+                    <p class="card-text"><%= i.content.slice(0,50)%>...<a href="/fullBlog/<%= i._id %>" class="mx-1">read more</a></p>
+                    <a href="/fullBlog/<%= i._id %>" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <%}%>
+        </div>
+
+        <%- include('./parcials/footer.ejs') %>

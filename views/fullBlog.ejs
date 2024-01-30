@@ -1,0 +1,17 @@
+<%- include('./parcials/header.ejs') %>
+    <%- include('./parcials/navber.ejs') %>
+
+        <div class="container mt-5">
+            <div class="card mt-4" style="width: 80rem;">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <p class="card-text">Publishar Name : <%= blog.name %></p>
+                        <p class="card-text mx-3">Publisha By : <%= blog.postedAt %></p>
+                    </div>
+                    <h5 class="card-title"><%= blog.title %></h5>
+                    <p class="card-text"><%= blog.content%></p>
+                </div>
+            </div>
+        </div>
+
+        <%- include('./parcials/footer.ejs') %>
